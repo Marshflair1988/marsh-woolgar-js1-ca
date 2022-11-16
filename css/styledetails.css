@@ -1,0 +1,26 @@
+html,
+body {
+    height: 100%
+}
+
+body {
+    background: white;
+    font-family; "Open sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    width 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.results {
+    margin-top: 40px;
+    display: flex;
+}

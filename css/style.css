@@ -39,8 +39,8 @@ body {
     margin: 1rem;
     padding: 1rem;
     max-width: 200px;
-    background: white;
-    border: 1px solid grey;
+    background: rgb(219, 190, 190);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 1rem;
 }
 
@@ -52,8 +52,8 @@ body {
 }
 
 .error {
-    border: 1px solid darkred;
+    border: 1px solid rgb(0, 0, 0);
     padding: 1rem;
-    color: darkred;
-    background: rgba(255, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    background: rgb(192, 54, 54);
 }
