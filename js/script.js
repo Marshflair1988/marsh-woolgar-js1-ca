@@ -3,6 +3,7 @@ const corsEnabledUrl = "https://noroffcors.onrender.com/";
 
 const corsFix = corsEnabledUrl + breweryUrl;
 
+const loaderAnimation = document.querySelector(".loader")
 const resultsContainer = document.querySelector(".results");
 
 async function callApi() {
@@ -11,9 +12,6 @@ async function callApi() {
 
         const results = await response.json();
 
-        const name = results.name;
-        const Locations = results.state;
-        const type = results.brewery_type;
 
         resultsContainer.innerHTML = "";
 
