@@ -25,6 +25,12 @@ body {
     }
 }
 
+h1 {
+    margin-left: 2rem;
+}
+
+margin
+
 .container {
     width: 1100px;
     margin: 0 auto;
@@ -36,12 +42,13 @@ body {
 }
 
 .result {
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 200px;
-    background: rgb(219, 190, 190);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 1rem;
+    color:white;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    max-width: 300px;
+    background: rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 2rem;
 }
 
 .success {
@@ -56,4 +63,61 @@ body {
     padding: 1rem;
     color: rgb(0, 0, 0);
     background: rgb(192, 54, 54);
+}
+
+.image {
+    height: 150px;
+    background-size: cover;
+    background-position: center top;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px 40px;
+    font-family: sans-serif;
+    background: #ebebeb;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+form {
+    padding: 2em;
+    background: white;
+    border-radius: 1rem;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: rgb(11, 91, 133);
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
 }

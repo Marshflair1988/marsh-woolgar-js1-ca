@@ -1,31 +1,33 @@
-const breweryUrl = "https://api.openbrewerydb.org/breweries";
-const corsEnabledUrl = "https://noroffcors.onrender.com/";
-
-const corsFix = corsEnabledUrl + breweryUrl;
+const url = "https://rickandmortyapi.com/api/character";
 
 const loaderAnimation = document.querySelector(".loader")
 const resultsContainer = document.querySelector(".results");
+const url = "https://rickandmortyapi.com/api/character";
 
 async function callApi() {
+    
     try {
-        const response = await fetch(corsFix);
+        const response = await fetch(url);
 
-        const results = await response.json();
+        const info = await response.json();
 
+        const details = info.results;
+    
+        console.log(details);
 
         resultsContainer.innerHTML = "";
 
-        for(let i = 0; i < results.length; i++) {
-            console.log(results[i].name)
+        for(let i = 0; i < details.length; i++) {
+            console.log(details[i].name)
             if(i === 12) {
                 break;
             }
 
-            resultsContainer.innerHTML += `<div class="result">
-            <span><li>Name: ${results[i].name}</li></span>
-            <span><li>Location: ${results[i].state}</li></span>
-            <span><li>Type: ${results[i].brewery_type}</li></span>
-            </div>`;
+            resultsContainer.innerHTML += `<a href="details.html?id=${info.id}" class="result">
+            <span><li>Name: ${details[i].name}</li></span>
+            <span><li>Species: ${details[i].species}</li></span>
+            <span><li>Status: ${details[i].status}</li></span>
+            </a>`;
         }
         
 
@@ -33,6 +35,10 @@ async function callApi() {
         console.log(error);
         resultsContainer.innerHTML = alert("error", error);
     }
+}
+
+function alert(alertType="success", message = "") {
+    return `<div class="alert ${alertType}">${message}</div>`;
 }
 
 callApi();
