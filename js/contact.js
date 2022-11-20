@@ -68,6 +68,12 @@ function validateForm() {
     } else {
         countryError.style.display = "block";
     }
+
+    if(validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "block";
+    }
     
     console.log("hello");
 }
@@ -82,4 +88,10 @@ function checkLength(value, len) {
         return false;
     }
 
+}
+
+function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
 }

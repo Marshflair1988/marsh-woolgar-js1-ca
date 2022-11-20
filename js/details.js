@@ -6,10 +6,11 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-
 console.log(id);
 
 const url = "https://rickandmortyapi.com/api/character/" + id;
+
+detailContainer.innerHTML = "";
 
 async function callApi() {
     
@@ -32,8 +33,8 @@ async function callApi() {
 callApi();
 
 function createHtml(details) {
-    detailContainer.innerHTML += `<h1>${details.name}</h1>
-                                <div class="details">
+    detailContainer.innerHTML += `<div class="result2">
+                                <h1>${details.name}</h1>
                                 <h2>
                                 ${details.gender}<br>
                                 ${details.status}<br>
